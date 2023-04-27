@@ -33,7 +33,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Fecha de publicación: </dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -140,7 +140,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  &larr; Back to the blog
+                  &larr; Volver
                 </Link>
               </div>
             </footer>

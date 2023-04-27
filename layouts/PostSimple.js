@@ -20,15 +20,15 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             <div className="space-y-1 border-b border-gray-200 pb-10 text-center dark:border-gray-700">
               <dl>
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Fecha de publicación: </dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>{formatDate(date)}</time>
                   </dd>
                 </div>
               </dl>
-              <div>
+              {/* <div>
                 <PageTitle>{title}</PageTitle>
-              </div>
+              </div> */}
             </div>
           </header>
           <div
@@ -36,7 +36,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+                {/* <time dateTime={date}>{formatDate(date)}</time> */}
+                {children}
+              </div>
             </div>
             <Comments frontMatter={frontMatter} />
             <footer>
@@ -61,6 +64,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     </Link>
                   </div>
                 )}
+              </div>
+              <div className="pt-12 xl:pt-28 text-center">
+                <Link
+                  href="/blog"
+                  className="text-primary-900 font-medium rounded-lg py-3 px-12 bg-primary-500 hover:bg-primary-600 hover:text-primary-200 dark:bg-primary-600 dark:text-slate-900 dark:hover:bg-primary-500 transition-colors"
+                >
+                  Volver
+                </Link>
               </div>
             </footer>
           </div>
